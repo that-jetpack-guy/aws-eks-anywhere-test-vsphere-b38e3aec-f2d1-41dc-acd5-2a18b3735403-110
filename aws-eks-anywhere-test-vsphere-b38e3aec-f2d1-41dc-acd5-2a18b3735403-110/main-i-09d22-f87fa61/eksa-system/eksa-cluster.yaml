@@ -6,7 +6,7 @@ metadata:
 spec:
   bundlesRef:
     apiVersion: anywhere.eks.amazonaws.com/v1alpha1
-    name: bundles-7304
+    name: bundles-7305
     namespace: eksa-system
   clusterNetwork:
     cniConfig:
@@ -39,7 +39,7 @@ spec:
   managementCluster:
     name: main-i-09d22-f87fa61
   workerNodeGroupConfigurations:
-  - count: 1
+  - count: 2
     machineGroupRef:
       kind: VSphereMachineConfig
       name: main-i-09d22-f87fa61
@@ -91,10 +91,10 @@ metadata:
 spec:
   cloneMode: fullClone
   datastore: /SDDC-Datacenter/datastore/WorkloadDatastore
-  diskGiB: 25
+  diskGiB: 35
   folder: /SDDC-Datacenter/vm
-  memoryMiB: 8192
-  numCPUs: 2
+  memoryMiB: 10196
+  numCPUs: 1
   osFamily: bottlerocket
   resourcePool: /SDDC-Datacenter/host/Cluster-1/Resources/Compute-ResourcePool
   template: /SDDC-Datacenter/vm/Templates/kubernetes-1-27-eks-7-bottlerocket
